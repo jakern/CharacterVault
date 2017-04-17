@@ -1,5 +1,6 @@
 var mongoose     = require('mongoose');
 var Schema       = mongoose.Schema;
+var mongooseApiQuery = require('mongoose-api-query');
 
 var NPCSchema   = new Schema({
 		
@@ -77,5 +78,5 @@ var NPCSchema   = new Schema({
 		]
 		
 });
-
+NPCSchema.plugin(mongooseApiQuery);
 module.exports = mongoose.model('NPC', NPCSchema);

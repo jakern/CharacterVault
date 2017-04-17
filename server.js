@@ -66,6 +66,20 @@ router.route('/npcs')
 		});
 	});
 
+// on routes that end in /search/
+router.route('/search')
+    .get(function(req, res) {
+        console.log(req.query);
+        NPC.apiQuery(req.query).exec( function(err, npcs) {
+            if (err) {
+		res.send(err);
+		}
+			res.json(npcs);
+		});
+
+    });
+
+
 // on routes that end in /npcs/:npc_id
 // ----------------------------------------------------
 router.route('/npcs/:npc_id')
