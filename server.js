@@ -100,7 +100,50 @@ router.route('/npcs/:npc_id')
 			if (err)
 				res.send(err);
 
-			npc.name = req.body.name;
+			console.log(req.body);
+			//npc = req.body;
+
+			npc.title = req.body.title;
+			npc.exp = req.body.exp;
+			npc.size= req.body.size;
+			npc.footprint.x = req.body.footprint.x;
+			npc.footprint.y = req.body.footprint.y;
+			npc.reach = req.body.reach;
+			npc.type = req.body.type;
+			npc.mobility.primaryMotionType = req.body.mobility.primaryMotionType;
+			npc.mobility.groundSpeed = req.body.mobility.groundSpeed;
+			npc.mobility.burrowSpeed = req.body.mobility.burrowSpeed;
+			npc.mobility.flySpeed = req.body.mobility.flySpeed;
+			npc.mobility.swimSpeed = req.body.mobility.swimSpeed;
+			//npc.templates.rogue = req.body.templates.rogue;
+			//npc.templates.monster = req.body.templates.monster;
+			npc.attributes.strength = req.body.attributes.strength;
+			npc.attributes.constitution = req.body.attributes.constitution;
+			npc.attributes.intelligence = req.body.attributes.intelligence;
+			npc.attributes.wisdom = req.body.attributes.wisdom;
+			npc.attributes.charisma = req.body.attributes.charisma;
+			npc.attributes.dexterity = req.body.attributes.dexterity;
+			npc.traits.initative = req.body.traits.initative;
+			npc.traits.attack = req.body.traits.attack;
+			npc.traits.defense = req.body.traits.defense;
+			npc.traits.resilience = req.body.traits.resilience;
+			npc.traits.health = req.body.traits.health;
+			npc.traits.competence = req.body.traits.competence;
+			npc.signatureSkills = req.body.signatureSkills;
+			npc.spellcasting.skilGrade = req.body.spellcasting.skilGrade;
+			npc.spellcasting.spells = req.body.spellcasting.spells;
+			npc.qualities = req.body.qualities;
+			npc.treasure.any = req.body.treasure.any;
+			npc.treasure.coin = req.body.treasure.coin;
+			npc.treasure.gear = req.body.treasure.gear;
+			npc.treasure.loot = req.body.treasure.loot;
+			npc.treasure.magic = req.body.treasure.magic;
+			npc.treasure.trophies = req.body.treasure.trophies;
+			npc.gear.mountsAndVehicles = req.body.gear.mountsAndVehicles;
+			npc.gear.gear = req.body.gear.gear;
+			npc.attacks = req.body.attacks;
+
+			console.log(npc);
 			npc.save(function(err) {
 				if (err)
 					res.send(err);

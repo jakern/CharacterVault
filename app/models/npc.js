@@ -24,7 +24,7 @@ var NPCSchema   = new Schema({
 		templates: {
 			rogue: [String],
 			monster: [String]
-		},
+	},
 		attributes: {
 			strength: Number,
 			dexterity: Number,
